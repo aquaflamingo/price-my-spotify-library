@@ -1,4 +1,6 @@
 # Price My Spotify Library
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+
 Do you like streaming and purchasing music ?
 
 Ever wonder how much your entire Spotify library would cost for you to purchase? No? Well you still can !
@@ -32,21 +34,13 @@ If you wanted to purchase your entire Spotify library, it would cost around: 302
 +----------------------------------------------+--------------------+
 | Playlist                                     | Cost               |
 +----------------------------------------------+--------------------+
-| essential techno dubbing 🦒                  | 99.0               |
-| lofi house laundry mat 🧺🦓                  | 99.0               |
-| interstellar jungle experience 🌓            | 72.27              |
-| sweaty lofi house driftin                    | 10.89              |
-| sadboi lofi house                            | 14.85              |
-| sunset on the mykonos coast 🦑               | 79.2               |
-| the concrete  jungle dnb 🎋                  | 78.21              |
-| nuhouse soul train 🚂                        | 29.7               |
-| glitter disco house box                      | 99.0               |
-| intergalatic house dubbing 🐈                | 67.32              |
-| the german whip 🏎                            | 7.92               |
-| deep squatting house 👟                      | 99.0               |
-| Jackin house cats 🐱                         | 60.39              |
-| KRAMER'S LEFTFIELD HOUSE  🧰                 | 46.53              |
-| NEIGE BLANCHE 🌌                             | 26.73              |
+| xxxxxxxxxxxxxxxxxxxxxxxxxx                   | 99.0               |
+| xxxxxxxxxxxxxxxxxxxxxxxxx                    | 99.0               |
+| xxxxxxxxxxxxxxxxxxxxxxxxxxx                  | 72.27              |
+| xxxxxxxxxxxxxxxxxxxxxxxxxxx                  | 10.89              |
+| xxxxxxxxxxxxxxxxxxxxxxxxxxx                  | 14.85              |
+| xxxxxxxxxxxxxxxxxxxxxxxxxxx                  | 79.2               |
+| xxxxxxxxxxxxxxxxxxxxxxxxxx                   | 78.21              |
  # etcetera..
 ```
 
