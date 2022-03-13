@@ -1,4 +1,6 @@
 # Price My Spotify Library
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+
 Do you like streaming and purchasing music ?
 
 Ever wonder how much your entire Spotify library would cost for you to purchase? No? Well you still can !
