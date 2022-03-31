@@ -1,4 +1,5 @@
 require 'pry'
+require 'fileutils'
 require 'terminal-table'
 require_relative 'spotify'
 
@@ -9,14 +10,35 @@ class App
     @config = config
   end
 
-  def start
-    s = Spotify.new
+  def export_library
+    user = s.user(@config[:user])
+    all_playlists = gather_all_playlists(user)
 
+    FileUtils.mkdir_p("out")
+
+    all_playlists.each do |p|
+      pl = Playlist.new(p)
+
+      pl_name = pl.name.downcase.gsub(/ /,'_')
+      pl_name = pl_name.gsub(/\//,'')
+
+      File.open("out/#{pl_name}.txt", "w") do |f|
+        pl.tracks.each do |t|
+          all_artists = t.artists.map(&:name).join(", ")
+
+          f.puts "#{all_artists} - #{t.name}"
+        end
+      end
+    end
+  end
+
+  def price_library
     user = s.user(@config[:user])
 
     all_playlists = gather_all_playlists(user)
 
     track_count = 0 
+
     playlists = all_playlists.map do |p|
       pl = Playlist.new(p)
       track_count += pl.tracks.count
@@ -40,6 +62,10 @@ If you wanted to purchase your entire Spotify library, it would cost around: #{p
   end
 
   private 
+  def s
+    @s ||= Spotify.new
+  end
+
   def gather_all_playlists(user)
     playlists = []
     offset = 0

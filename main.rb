@@ -9,9 +9,18 @@ OptionParser.new do |parser|
   parser.on("-u", "--user=NAME", "Username to lookup") do |v|
     @options[:user] = v
   end 
+
+  parser.on("-e", "--export", "Exports playlists to text times") do |v|
+    @options[:export] = true
+  end
 end.parse!
 
 raise ArgumentError.new("requires user flag") if @options[:user].nil?
 
 app = App.new(@options)
-app.start
+if @options[:export]
+  app.export_library
+else
+  app.price_library
+end
+
