@@ -19,7 +19,7 @@ raise ArgumentError.new("requires user flag") if @options[:user].nil?
 
 app = App.new(@options)
 if @options[:export]
-  app.export_library
+  app.export_library(true)
 else
   app.price_library
 end

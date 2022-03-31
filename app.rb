@@ -10,7 +10,7 @@ class App
     @config = config
   end
 
-  def export_library
+  def export_library(open = false)
     user = s.user(@config[:user])
     all_playlists = gather_all_playlists(user)
 
@@ -26,7 +26,14 @@ class App
         pl.tracks.each do |t|
           all_artists = t.artists.map(&:name).join(", ")
 
-          f.puts "#{all_artists} - #{t.name}"
+          bp = "https://www.beatport.com/search?q=#{t.name.gsub(/ /,"+")}"
+
+          f.puts "#{all_artists} - #{t.name} | #{bp}"
+
+          if open
+            system("open -a 'Brave Browser' #{bp}") 
+            sleep 0.5
+          end
         end
       end
     end
